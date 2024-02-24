@@ -1,23 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: font1;
-  src: url(KFOmCnqEu92Fr1Mu4mxK.woff2);
-}
+
 @font-face {
   font-family: font2;
-  src: url(KFOlCnqEu92Fr1MmEU9fBBc4.woff2);
+  src: url(FuturaPTLight.otf);
 }
+
 @font-face {
   font-family: font3;
   src: url(F37Caslon-Regular.woff2);
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-family: font3;
+  scroll-behavior: smooth;
+}
+
+p,
+span {
+  font-family: font2;
+  font-weight: 100;
+}
+
+.Bar{
+  display: none;
 }
 .swiper {
   width: 100%;
@@ -26,6 +36,7 @@
 
 .swiper-slide {
   text-align: center;
+  height: 95vh;
   font-size: 18px;
   background: #fff;
   display: flex;
@@ -38,4 +49,281 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.Section {
+  min-height: 100vh;
+  background-image: url(https://24carrots.com/wp-content/themes/24carrots/img/big-carrot.svg);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.banner {
+  height: 90vh;
+  background-position: center;
+  background-image: url(https://24carrots.com/wp-content/uploads/2023/10/unforegetable-banner.png);
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -45%);
+  background-color: white;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.More-Details {
+  transition: .5s;
+}
+
+.Slider-Img:hover .More-Details {
+  opacity: 1;
+  z-index: 20;
+}
+
+.Circle {
+  opacity: 0;
+}
+
+.HoverItem {
+  transition: .5s;
+}
+
+.HoverItem:hover .Circle {
+  transition: .5s;
+  opacity: 1;
+}
+
+button:hover {
+  transition: .5s;
+  gap: 4rem;
+}
+
+@media screen and (max-width:1000px) {
+  .text-8xl {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .AboutUs {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .AboutUs div {
+    width: 85vw;
+  }
+
+  .AboutUs .SwiperTab {
+    height: 60vh;
+  }
+
+  .AboutUs .SwiperTab .swiper-wrapper {
+    align-items: center;
+  }
+  .WeddingBox{
+    flex-direction: column;
+    align-items: center;
+  }
+  .WeddingImage{
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+  }
+  .WeddingText{
+    text-align: center;
+  }
+  .Venue p{
+    width: 80%;
+  }
+  .swiper-slide {
+    height: 80vh;
+  }
+  .Slider-Img button{
+    width: 100%;
+  }
+  .More-Details{
+    padding: 1rem;
+  }
+  .Services{
+    align-items: center;
+    flex-direction: column;
+  }
+  .Services .ServicesDetails{
+    align-items: center;
+    width: 90%;
+  }
+  .Services .ServicesImages{
+    min-width: 0px;
+    width: 60vw;
+    height: 60vw;
+  }
+  .Services .swiper-slide{
+    min-width: 100px;
+  }
+  .Circle {
+    top: 10%;
+    left: -10%;
+  }
+  .ExperBox{
+    height: auto;
+    flex-direction: column;
+  }
+  .ExperHeadingBox{
+    width: 100%;
+    align-items: center;
+  }
+  .ExperHeadingBox p{ 
+    text-align: center;
+   }
+  .ExperImage{
+    width: 100%;
+    height: 80vh;
+  }
+  .ExperImage img:nth-child(1){
+    transform: translateX(16%) translateY(-56%) rotate(-12deg);
+  }
+  .ExperImage img:nth-child(2){
+    transform: translateX(-56%) translateY(-36%) rotate(30deg);
+  }
+  .ExperImage img:nth-child(3){
+    transform: translateX(-50%) translateY(-50%) rotate(10deg);
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  .HeaderTab{
+    height: 4rem;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+  .HeaderTab ul{
+    display: none;
+  }
+  .HeaderTab div{
+    width: max-content;
+  }
+  .HeaderTab .Bar{
+    display: block;
+  }
+  .SwiperBox{
+    margin: 3rem 0rem;
+  }
+  .swiper-slide{
+    min-width: 300px;
+    height: 60vh;
+  }
+  .More-Details button{
+    font-size: .8rem;
+  }
+  .WeddingBox{
+    padding: 5rem 2rem;
+  }
+  .Experience{
+    padding: 2rem;
+  }
+  .ExperIcon{
+    justify-content: center;
+  }
+  .Section_1{
+    overflow: hidden;
+  }
+  .Section_2 div p{
+    width: 90%;
+  }
+  .ContactUs{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem 1rem;
+}
+  .text-3xl{
+    font-size: 1.2rem;
+  }
+  .Footer div div h1 a{
+    font-size: 1.5rem;
+  }
+  .text-5xl{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .text-8xl {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  .ExperImage img{
+    width: 10rem;
+  }
+}
+@media screen and (max-width:400px) {
+    .VideoTab span{
+    font-size: 10vw;
+  }
+  .AboutUs div h5{
+    margin-bottom: 1rem;
+  }
+  .AboutUs div h1{
+    line-height: 3rem;
+    margin-bottom: .25rem;
+  }
+  .SwiperTab{
+    border-start-start-radius: 10rem;
+  }
+  .banner{
+    height: 50vh;
+  }
+  .banner::before {
+    width: 100vw;
+    height: 100vw;
+  }
+  .ServicesImage{
+    width: 100px;
+  }
+  .Experience{
+    padding: 1rem;
+  }
+  .ExperHeadingBox{
+    gap: 0;
+  }
+  .ExperImage img:nth-child(1){
+    transform: none;
+    top: 8rem;
+  }
+  .ExperImage img:nth-child(2){
+    transform: none;
+    top: 1rem;
+    right: 0rem;
+  }
+  .ExperImage img:nth-child(3){
+    transform: none;
+    bottom: 0rem;
+    right: 0rem;
+  }
+  .Footer div div h1 a{
+    font-size: 1.5rem;
+  }
+  .text-2xl{
+    font-size: 1rem;
+  }
+  .text-xl{
+    font-size: 1rem;
+  }
+  .text-8xl {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
 }
