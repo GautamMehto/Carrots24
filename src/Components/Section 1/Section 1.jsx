@@ -62,7 +62,7 @@ const Section = () => {
                 <button className="flex items-center gap-5 mt-8  text-xl bg-amber-700 p-3 px-10 rounded-full hover:bg-amber-600 transition ">
                     EXPLORE VENUES<HiArrowLongRight/></button>
             </div>
-            <div className='SwiperBox bg-white W-full mt-32 mb-10'>
+            <div className='SwiperBox bg-white W-full mt-32'>
                 <Swiper
                     slidesPerView={2.1}
                     spaceBetween={30}
