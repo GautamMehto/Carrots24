@@ -19,7 +19,7 @@ const Header = ({displayName}) => {
     return (
         <div className='w-full bg-white relative z-[46]' id="Header">
             <div className='HeaderTab w-full h-32 flex justify-center flex-wrap items-center bg-white'>
-                <ul className='w-1/3 flex justify-center items-center text-black gap-x-8'>
+                <ul className='w-1/3 flex justify-center items-center flex-wrap text-black gap-x-8'>
                     <li className='text-xl uppercase hover:text-amber-600 '><a href="#AboutUs">about</a></li>
                     <li className='text-xl uppercase hover:text-amber-600 '><a href="#Services">services</a></li>
                     <li className='text-xl uppercase hover:text-amber-600 '><a href="#Experience">experience</a></li>

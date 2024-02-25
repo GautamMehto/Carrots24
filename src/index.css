@@ -25,7 +25,9 @@ span {
   font-family: font2;
   font-weight: 100;
 }
-
+.MenuTab{
+  transition: 1s all ease;
+}
 .Bar{
   display: none;
 }
@@ -264,8 +266,16 @@ button:hover {
 }
 
 @media screen and (max-width:500px) {
+  .Services .ServicesImages{
+    min-width: 0px;
+    width: 80vw;
+    height: 80vw;
+  }
+  .ServicesImages .swiper-wrapper{
+    align-items: center;
+  }
   .ExperImage img{
-    width: 10rem;
+    width: 14rem;
   }
 }
 @media screen and (max-width:400px) {
@@ -300,7 +310,7 @@ button:hover {
   }
   .ExperImage img:nth-child(1){
     transform: none;
-    top: 8rem;
+    top: 12rem;
   }
   .ExperImage img:nth-child(2){
     transform: none;
@@ -311,6 +321,9 @@ button:hover {
     transform: none;
     bottom: 0rem;
     right: 0rem;
+  }
+  .Footer{
+    padding: 5rem 1.5rem 1rem;
   }
   .Footer div div h1 a{
     font-size: 1.5rem;
